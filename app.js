@@ -1,96 +1,88 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const events = [
-        {
-            year: "1947-48",
-            title: "First Kashmir War",
-            description: "Military conflict over Kashmir. India: INC | Pakistan: Muslim League"
-        },
-        {
-            year: "1965",
-            title: "Second Kashmir War",
-            description: "Full-scale war over Kashmir. India: INC | Pakistan: Ayub Khan's Military Govt"
-        },
-        {
-            year: "1971",
-            title: "Bangladesh Liberation War",
-            description: "India intervenes, Pakistan splits. India: INC (Indira Gandhi) | Pakistan: Yahya Khan's Military Govt"
-        },
-        {
-            year: "1984",
-            title: "Operation Meghdoot",
-            description: "India occupies Siachen Glacier. India: INC (Indira Gandhi) | Pakistan: Zia-ul-Haq's Military Govt"
-        },
-        {
-            year: "1998",
-            title: "Nuclear Tests",
-            description: "Nuclear capability shown. India: BJP | Pakistan: Nawaz Sharif (PML-N)"
-        },
-        {
-            year: "1999",
-            title: "Kargil War",
-            description: "Limited conflict in Kashmir. India: BJP (Vajpayee) | Pakistan: Musharraf's Military Govt"
-        },
-        {
-            year: "2001-02",
-            title: "Parliament Attack Crisis",
-            description: "Massive military mobilization. India: BJP (Vajpayee) | Pakistan: Musharraf's Military Govt"
-        },
-        {
-            year: "2008",
-            title: "Mumbai Attacks",
-            description: "Diplomatic isolation attempts. India: INC (Manmohan Singh) | Pakistan: PPP"
-        },
-        {
-            year: "2016",
-            title: "Surgical Strikes",
-            description: "Cross-border strikes. India: BJP (Narendra Modi) | Pakistan: PML-N (Nawaz Sharif)"
-        },
-        {
-            year: "2019",
-            title: "Balakot Airstrike",
-            description: "Aerial bombings inside Pakistan. India: BJP (Narendra Modi) | Pakistan: PTI (Imran Khan)"
-        },
-        {
-            year: "2019",
-            title: "Removal of Article 370",
-            description: "Changed Kashmir's autonomy. India: BJP (Narendra Modi) | Pakistan: PTI (Imran Khan)"
-        },
-        {
-            year: "2023",
-            title: "G20 in Kashmir",
-            description: "Diplomatic snubbing. India: BJP (Narendra Modi) | Pakistan: Caretaker Govt"
-        },
-        {
-            year: "2024",
-            title: "Indus Treaty Review",
-            description: "Water pressure strategy. India: BJP (Narendra Modi) | Pakistan: Caretaker Govt"
-        },
-        {
-            year: "2025",
-            title: "Indus Treaty Suspension",
-            description: "Formal suspension. India: BJP (Narendra Modi) | Pakistan: PML-N Coalition (expected)"
-        }
-    ];
+// Timeline Events
+const events = [
+  { year: "1947-48", event: "First Kashmir War", details: "Military conflict over Kashmir. World Bank mediated early water rights discussion." },
+  { year: "1965", event: "Second Kashmir War", details: "Full-scale war. World Bank focused on Indus Water implementation." },
+  { year: "1971", event: "Bangladesh Liberation War", details: "India intervened; Pakistan broke into two. WBG paused development aid temporarily." },
+  { year: "1984", event: "Siachen Conflict", details: "Operation Meghdoot. World Bank promoted neutral humanitarian aid." },
+  { year: "1998", event: "Nuclear Tests", details: "Nuclear threat escalated. World Bank promoted regional trade projects." },
+  { year: "1999", event: "Kargil War", details: "Limited war; IMF/World Bank temporarily froze some funds to Pakistan." },
+  { year: "2001-02", event: "Parliament Attack", details: "Troop mobilizations. WBG encouraged educational reforms." },
+  { year: "2008", event: "Mumbai Attacks", details: "Diplomatic crises. WBG pushed for anti-corruption measures." },
+  { year: "2016", event: "Surgical Strikes", details: "Cross-border strikes. World Bank focused on water security." },
+  { year: "2019", event: "Balakot Airstrikes", details: "Aerial bombings. World Bank advocated for education over militarization." },
+  { year: "2019", event: "Removal of Article 370", details: "Kashmir autonomy revoked. Focus on regional development." },
+  { year: "2023", event: "G20 in Kashmir Tensions", details: "Diplomatic tensions. World Bank pushed environmental projects." },
+  { year: "2024", event: "Indus Waters Treaty Review", details: "India seeks treaty review. World Bank stressed dialogue." },
+  { year: "2025", event: "Indus Treaty Suspension", details: "Major escalation predicted. WBG likely to intervene to broker new water deals." }
+];
 
-    const timeline = document.getElementById("timeline");
+// Render Timeline
+const timeline = document.getElementById('timeline');
+events.forEach(e => {
+  const div = document.createElement('div');
+  div.className = 'event';
+  div.innerHTML = `<h3>${e.year} - ${e.event}</h3><p>${e.details}</p>`;
+  timeline.appendChild(div);
+});
 
-    events.forEach((event, index) => {
-        const div = document.createElement("div");
-        div.className = `event ${index % 2 === 0 ? 'left' : 'right'}`;
-        div.innerHTML = `<h3>${event.year}: ${event.title}</h3><p>${event.description}</p>`;
-        timeline.appendChild(div);
-    });
+// Education Chart
+const educationCtx = document.getElementById('educationChart').getContext('2d');
+new Chart(educationCtx, {
+  type: 'line',
+  data: {
+    labels: ['1950', '1960', '1970', '1980', '1990', '2000', '2010', '2020', '2025'],
+    datasets: [
+      {
+        label: 'India (%)',
+        data: [8, 10, 20, 30, 45, 55, 70, 85, 90],
+        borderColor: '#00ff00',
+        backgroundColor: 'transparent',
+        borderWidth: 2
+      },
+      {
+        label: 'Pakistan (%)',
+        data: [5, 7, 12, 20, 28, 35, 45, 55, 60],
+        borderColor: '#ff0000',
+        backgroundColor: 'transparent',
+        borderWidth: 2
+      }
+    ]
+  },
+  options: {
+    scales: { y: { beginAtZero: true } },
+    plugins: {
+      legend: { labels: { color: '#FEE715' } }
+    }
+  }
+});
 
-    const searchBar = document.getElementById("searchBar");
-    searchBar.addEventListener("input", function () {
-        const term = searchBar.value.toLowerCase();
-        const eventDivs = document.querySelectorAll(".event");
-        eventDivs.forEach(div => {
-            if (div.textContent.toLowerCase().includes(term)) {
-                div.style.display = "block";
-            } else {
-                div.style.display = "none";
-            }
-        });
-    });
+// Corruption Chart
+const corruptionCtx = document.getElementById('corruptionChart').getContext('2d');
+new Chart(corruptionCtx, {
+  type: 'line',
+  data: {
+    labels: ['2000', '2010', '2020', '2025'],
+    datasets: [
+      {
+        label: 'India',
+        data: [-0.3, -0.2, -0.1, 0.0],
+        borderColor: '#00bfff',
+        backgroundColor: 'transparent',
+        borderWidth: 2
+      },
+      {
+        label: 'Pakistan',
+        data: [-0.8, -0.7, -0.5, -0.4],
+        borderColor: '#ff6347',
+        backgroundColor: 'transparent',
+        borderWidth: 2
+      }
+    ]
+  },
+  options: {
+    scales: { y: { min: -1, max: 1 } },
+    plugins: {
+      legend: { labels: { color: '#FEE715' } }
+    }
+  }
 });
