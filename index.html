@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>India-Pakistan Conflict Timeline</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>India-Pakistan Conflict Timeline</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <header>
-        <h1>India-Pakistan Conflict Timeline (1947–2025)</h1>
-        <input type="text" id="searchBar" placeholder="Search events...">
-    </header>
 
-    <main>
-        <div class="timeline" id="timeline"></div>
-    </main>
+  <h1>India-Pakistan Conflict Timeline (1947–2025)</h1>
 
-    <footer>
-        <p>© 2025 Conflict Analysis Initiative</p>
-    </footer>
+  <div id="timeline"></div>
 
-    <script src="app.js"></script>
+  <h2>World Bank Insights 📊</h2>
+
+  <div class="charts-container">
+    <div class="chart-card">
+      <h3>Education Enrollment (%)</h3>
+      <canvas id="educationChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h3>Control of Corruption</h3>
+      <canvas id="corruptionChart"></canvas>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
