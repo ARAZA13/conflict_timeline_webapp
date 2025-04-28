@@ -1,51 +1,35 @@
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1a1a1a;
-  color: #c7c7c7;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0b0c10;
+  color: #c5c6c7;
 }
 header {
-  background-color: #2b2b2b;
-  padding: 1rem;
+  background-color: #1f2833;
+  padding: 20px;
   text-align: center;
 }
-header h1 {
-  margin-bottom: 0.5rem;
-  color: #66ff66;
+#searchBox {
+  margin-top: 10px;
+  padding: 8px;
+  width: 300px;
 }
-#searchInput {
-  width: 80%;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #444;
-  background: #111;
-  color: #eee;
+main#timeline {
+  padding: 20px;
 }
-main {
-  padding: 2rem;
+.timeline-card {
+  background: #1f2833;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-left: 5px solid #45a29e;
 }
-.timeline-item {
-  border-left: 3px solid #66ff66;
-  margin: 1rem 0;
-  padding: 0 1rem;
-  position: relative;
+.timeline-card:hover {
+  background: #45a29e;
+  color: #0b0c10;
 }
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -7px;
-  width: 12px;
-  height: 12px;
-  background-color: #66ff66;
-  border-radius: 50%;
-}
-.timeline-year {
-  font-weight: bold;
-  color: #99ff99;
-}
-.timeline-desc {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+footer {
+  text-align: center;
+  font-size: 12px;
+  margin: 30px 0;
 }

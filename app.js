@@ -1,43 +1,49 @@
-const data = [
-  { year: "1947-48", threat: "Military conflict over Kashmir", india: "Indian National Congress (INC)", pakistan: "Muslim League" },
-  { year: "1965", threat: "Full-scale war over Kashmir", india: "INC", pakistan: "Ayub Khan's Military Govt" },
-  { year: "1971", threat: "Military intervention leading to Pakistan's breakup", india: "INC (Indira Gandhi)", pakistan: "Yahya Khan's Military Govt" },
-  { year: "1984", threat: "Military occupation of Siachen Glacier", india: "INC (Indira Gandhi)", pakistan: "Zia-ul-Haq's Military Govt" },
-  { year: "1998", threat: "Strategic threat; nuclear capability demonstrated", india: "BJP", pakistan: "Nawaz Sharif (PML-N)" },
-  { year: "1999", threat: "Limited war in Kashmir region", india: "BJP (Atal Bihari Vajpayee)", pakistan: "Musharraf's Military Govt" },
-  { year: "2001-02", threat: "Military mobilization; threat of war", india: "BJP (Atal Bihari Vajpayee)", pakistan: "Musharraf's Military Govt" },
-  { year: "2008", threat: "Diplomatic threats; isolation efforts", india: "INC (Manmohan Singh)", pakistan: "Pakistan People's Party (PPP)" },
-  { year: "2016", threat: "Cross-border military operations", india: "BJP (Narendra Modi)", pakistan: "PML-N (Nawaz Sharif)" },
-  { year: "2019", threat: "Air strikes in Pakistani territory", india: "BJP (Narendra Modi)", pakistan: "PTI (Imran Khan)" },
-  { year: "2019", threat: "Weakening Pakistan’s Kashmir narrative", india: "BJP (Narendra Modi)", pakistan: "PTI (Imran Khan)" },
-  { year: "2023", threat: "Diplomatic isolation threats", india: "BJP (Narendra Modi)", pakistan: "Caretaker Govt" },
-  { year: "2024", threat: "Strategic water treaty pressure", india: "BJP (Narendra Modi)", pakistan: "Caretaker Govt" },
-  { year: "2025", threat: "Formal suspension; escalation", india: "BJP (Narendra Modi)", pakistan: "PML-N Coalition (expected)" }
-];
 
-const timeline = document.getElementById('timeline');
-const searchInput = document.getElementById('searchInput');
-
-function renderTimeline(filteredData) {
+async function loadTimeline() {
+  const response = await fetch('data.json');
+  const events = await response.json();
+  const timeline = document.getElementById('timeline');
   timeline.innerHTML = '';
-  filteredData.forEach(item => {
-    const div = document.createElement('div');
-    div.className = 'timeline-item';
-    div.innerHTML = `<div class='timeline-year'>${item.year}</div>
-                     <div class='timeline-desc'>${item.threat}<br><b>India:</b> ${item.india} | <b>Pakistan:</b> ${item.pakistan}</div>`;
-    timeline.appendChild(div);
+
+  events.forEach(event => {
+    const card = document.createElement('div');
+    card.className = 'timeline-card';
+    card.innerHTML = `
+      <h3>${event.year_event}</h3>
+      <p><strong>Nature:</strong> ${event.nature_of_threat}</p>
+      <p><strong>India's Policy:</strong> ${event.india_policy_focus}</p>
+      <p><strong>Pakistan's Policy:</strong> ${event.pakistan_policy_focus}</p>
+      <p><strong>Conflict Highlight:</strong> ${event.conflict_highlight}</p>
+      <p><strong>World Bank Role:</strong> ${event.world_bank_role}</p>
+    `;
+    timeline.appendChild(card);
+  });
+
+  document.getElementById('searchBox').addEventListener('input', (e) => {
+    const keyword = e.target.value.toLowerCase();
+    const filtered = events.filter(event => 
+      event.year_event.toLowerCase().includes(keyword) ||
+      event.nature_of_threat.toLowerCase().includes(keyword) ||
+      event.india_policy_focus.toLowerCase().includes(keyword) ||
+      event.pakistan_policy_focus.toLowerCase().includes(keyword) ||
+      event.conflict_highlight.toLowerCase().includes(keyword) ||
+      event.world_bank_role.toLowerCase().includes(keyword)
+    );
+    timeline.innerHTML = '';
+    filtered.forEach(event => {
+      const card = document.createElement('div');
+      card.className = 'timeline-card';
+      card.innerHTML = `
+        <h3>${event.year_event}</h3>
+        <p><strong>Nature:</strong> ${event.nature_of_threat}</p>
+        <p><strong>India's Policy:</strong> ${event.india_policy_focus}</p>
+        <p><strong>Pakistan's Policy:</strong> ${event.pakistan_policy_focus}</p>
+        <p><strong>Conflict Highlight:</strong> ${event.conflict_highlight}</p>
+        <p><strong>World Bank Role:</strong> ${event.world_bank_role}</p>
+      `;
+      timeline.appendChild(card);
+    });
   });
 }
 
-searchInput.addEventListener('input', function() {
-  const keyword = this.value.toLowerCase();
-  const filtered = data.filter(item => 
-    item.year.toLowerCase().includes(keyword) ||
-    item.threat.toLowerCase().includes(keyword) ||
-    item.india.toLowerCase().includes(keyword) ||
-    item.pakistan.toLowerCase().includes(keyword)
-  );
-  renderTimeline(filtered);
-});
-
-renderTimeline(data);
+loadTimeline();

@@ -1,18 +1,15 @@
-# India-Pakistan Conflict Timeline Web App
 
-## How to Deploy on GitHub Pages
+# India-Pakistan Conflict Timeline (Expanded)
 
-1. Create a new GitHub repository.
-2. Upload the files: `index.html`, `style.css`, `app.js`, and `README.md`.
-3. Go to the repository settings.
-4. Find the 'Pages' section.
-5. Set source as `main` branch and `/root`.
-6. Your website will be live at `https://your-username.github.io/repository-name/`.
+## How to Use:
+1. Clone this repository.
+2. Open `index.html` in your browser.
+3. Search for keywords like 'World Bank', 'Bangladesh', 'Kashmir', etc.
 
----
-
-Military-style, dark-themed vertical timeline with full search capability!
+## Features:
+- Military dark theme
+- Full keyword search (policies, world bank roles, conflicts)
+- Vertical timeline design
 
 ---
-
-Enjoy! ✨
+Developed for strategic geopolitical analysis.
