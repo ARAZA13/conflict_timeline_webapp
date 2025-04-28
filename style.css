@@ -1,35 +1,78 @@
-
 body {
-  margin: 0;
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #0b0c10;
-  color: #c5c6c7;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1b1f22;
+    color: #f0f0f0;
 }
+
 header {
-  background-color: #1f2833;
-  padding: 20px;
-  text-align: center;
+    background-color: #252a2f;
+    padding: 20px;
+    text-align: center;
 }
-#searchBox {
-  margin-top: 10px;
-  padding: 8px;
-  width: 300px;
+
+#searchBar {
+    margin-top: 15px;
+    padding: 10px;
+    width: 50%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #2c2f33;
+    color: #fff;
 }
-main#timeline {
-  padding: 20px;
+
+.timeline {
+    margin: 40px auto;
+    width: 90%;
+    position: relative;
 }
-.timeline-card {
-  background: #1f2833;
-  margin-bottom: 15px;
-  padding: 20px;
-  border-left: 5px solid #45a29e;
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background: #4caf50;
+    top: 0;
+    bottom: 0;
+    margin-left: -2px;
 }
-.timeline-card:hover {
-  background: #45a29e;
-  color: #0b0c10;
+
+.event {
+    padding: 20px;
+    background: #2c2f33;
+    border-radius: 6px;
+    width: 40%;
+    position: relative;
+    margin: 20px 0;
 }
+
+.event.left {
+    left: 0;
+}
+
+.event.right {
+    left: 60%;
+}
+
+.event::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background: #4caf50;
+    border: 4px solid #fff;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
 footer {
-  text-align: center;
-  font-size: 12px;
-  margin: 30px 0;
+    text-align: center;
+    padding: 15px;
+    background-color: #252a2f;
+    color: #aaa;
+    font-size: 14px;
 }
