@@ -3,10 +3,12 @@ const conflicts = [
     year: "1947–1948",
     title: "First Kashmir War",
     details: [
-      "India: Indian National Congress (PM Jawaharlal Nehru)",
       "Pakistan: Muslim League (Governor-General Muhammad Ali Jinnah)",
-      "Economic Outlook - India: GDP ~$30 billion (USD 1947), GDP per capita ~$90. Nation-building phase with agrarian base.",
-      "Economic Outlook - Pakistan: GDP ~$10 billion, GDP per capita ~$100. Newly formed state facing fiscal and logistical challenges.",
+      "Economic Outlook - Pakistan: Newly formed state facing fiscal and logistical challenges.",
+      "GDP and GDP per capita - Pakistan: GDP ~$10 billion, GDP per capita ~$100.",
+      "India: Indian National Congress (PM Jawaharlal Nehru)",
+      "Economic Outlook - India: Nation-building phase with agrarian base.",
+      "GDP and GDP per capita - India: GDP ~$30 billion, GDP per capita ~$90.",
       "World Bank: Early involvement, helped mediate water sharing that laid the foundation for the Indus Waters Treaty."
     ]
   },
@@ -14,10 +16,12 @@ const conflicts = [
     year: "1965",
     title: "Second Kashmir War",
     details: [
-      "India: Indian National Congress (PM Lal Bahadur Shastri)",
       "Pakistan: Military regime under President Ayub Khan",
-      "Economic Outlook - India: GDP ~$60 billion, GDP per capita ~$110. Focused on industrialization under Five-Year Plans.",
-      "Economic Outlook - Pakistan: GDP ~$12 billion, GDP per capita ~$120. Fast-growing economy due to US aid and agricultural reforms.",
+      "Economic Outlook - Pakistan: Fast-growing economy due to US aid and agricultural reforms.",
+      "GDP and GDP per capita - Pakistan: GDP ~$12 billion, GDP per capita ~$120.",
+      "India: Indian National Congress (PM Lal Bahadur Shastri)",
+      "Economic Outlook - India: Focused on industrialization under Five-Year Plans.",
+      "GDP and GDP per capita - India: GDP ~$60 billion, GDP per capita ~$110.",
       "World Bank: Actively supported development projects and post-conflict stabilization."
     ]
   },
@@ -25,10 +29,12 @@ const conflicts = [
     year: "1971",
     title: "Bangladesh Liberation War",
     details: [
-      "India: Indian National Congress (PM Indira Gandhi)",
       "Pakistan: Military regime under President Yahya Khan",
-      "Economic Outlook - India: GDP ~$90 billion, GDP per capita ~$150. Strained due to refugee crisis and inflation.",
-      "Economic Outlook - Pakistan: GDP ~$11 billion, GDP per capita ~$130. Severely disrupted by civil war.",
+      "Economic Outlook - Pakistan: Severely disrupted by civil war.",
+      "GDP and GDP per capita - Pakistan: GDP ~$11 billion, GDP per capita ~$130.",
+      "India: Indian National Congress (PM Indira Gandhi)",
+      "Economic Outlook - India: Strained due to refugee crisis and inflation.",
+      "GDP and GDP per capita - India: GDP ~$90 billion, GDP per capita ~$150.",
       "World Bank: Major aid and development support post-conflict, especially to Bangladesh."
     ]
   },
@@ -36,10 +42,12 @@ const conflicts = [
     year: "1999",
     title: "Kargil War",
     details: [
-      "India: Bharatiya Janata Party (PM Atal Bihari Vajpayee)",
       "Pakistan: Pakistan Muslim League (PM Nawaz Sharif)",
-      "Economic Outlook - India: GDP ~$470 billion, GDP per capita ~$440. Liberalized economy gaining momentum.",
-      "Economic Outlook - Pakistan: GDP ~$75 billion, GDP per capita ~$500. Hit by sanctions and instability.",
+      "Economic Outlook - Pakistan: Hit by sanctions and instability.",
+      "GDP and GDP per capita - Pakistan: GDP ~$75 billion, GDP per capita ~$500.",
+      "India: Bharatiya Janata Party (PM Atal Bihari Vajpayee)",
+      "Economic Outlook - India: Liberalized economy gaining momentum.",
+      "GDP and GDP per capita - India: GDP ~$470 billion, GDP per capita ~$440.",
       "World Bank: Continued infrastructure development; encouraged conflict de-escalation."
     ]
   },
@@ -47,10 +55,12 @@ const conflicts = [
     year: "2001–2002",
     title: "India–Pakistan Standoff",
     details: [
-      "India: Bharatiya Janata Party (PM Atal Bihari Vajpayee)",
       "Pakistan: Military regime under President Pervez Musharraf",
-      "Economic Outlook - India: GDP ~$500 billion, GDP per capita ~$480. Economic reform continued despite military costs.",
-      "Economic Outlook - Pakistan: GDP ~$75 billion, GDP per capita ~$520. Reliant on foreign aid and remittances.",
+      "Economic Outlook - Pakistan: Reliant on foreign aid and remittances.",
+      "GDP and GDP per capita - Pakistan: GDP ~$75 billion, GDP per capita ~$520.",
+      "India: Bharatiya Janata Party (PM Atal Bihari Vajpayee)",
+      "Economic Outlook - India: Economic reform continued despite military costs.",
+      "GDP and GDP per capita - India: GDP ~$500 billion, GDP per capita ~$480.",
       "World Bank: Ongoing support in health, education, and power sectors; urged peace talks."
     ]
   },
@@ -58,10 +68,12 @@ const conflicts = [
     year: "2008",
     title: "Mumbai Attacks",
     details: [
-      "India: Indian National Congress (PM Manmohan Singh)",
       "Pakistan: Pakistan Peoples Party (PM Yousaf Raza Gillani)",
-      "Economic Outlook - India: GDP ~$1.2 trillion, GDP per capita ~$1,000. Rapid growth temporarily shaken.",
-      "Economic Outlook - Pakistan: GDP ~$170 billion, GDP per capita ~$1,000. Facing inflation and global financial pressures.",
+      "Economic Outlook - Pakistan: Facing inflation and global financial pressures.",
+      "GDP and GDP per capita - Pakistan: GDP ~$170 billion, GDP per capita ~$1,000.",
+      "India: Indian National Congress (PM Manmohan Singh)",
+      "Economic Outlook - India: Rapid growth temporarily shaken.",
+      "GDP and GDP per capita - India: GDP ~$1.2 trillion, GDP per capita ~$1,000.",
       "World Bank: Continued development funding with caution amid security concerns."
     ]
   },
@@ -69,10 +81,12 @@ const conflicts = [
     year: "2016",
     title: "Uri Attack and Surgical Strikes",
     details: [
-      "India: Bharatiya Janata Party (PM Narendra Modi)",
       "Pakistan: Pakistan Muslim League (PM Nawaz Sharif)",
-      "Economic Outlook - India: GDP ~$2.3 trillion, GDP per capita ~$1,700. Strong domestic growth with focus on infrastructure.",
-      "Economic Outlook - Pakistan: GDP ~$280 billion, GDP per capita ~$1,500. Dependent on CPEC investments and external loans.",
+      "Economic Outlook - Pakistan: Dependent on CPEC investments and external loans.",
+      "GDP and GDP per capita - Pakistan: GDP ~$280 billion, GDP per capita ~$1,500.",
+      "India: Bharatiya Janata Party (PM Narendra Modi)",
+      "Economic Outlook - India: Strong domestic growth with focus on infrastructure.",
+      "GDP and GDP per capita - India: GDP ~$2.3 trillion, GDP per capita ~$1,700.",
       "World Bank: Supported development programs; called for restraint on both sides."
     ]
   },
@@ -80,10 +94,12 @@ const conflicts = [
     year: "2019",
     title: "Pulwama Attack and Balakot Airstrikes",
     details: [
-      "India: Bharatiya Janata Party (PM Narendra Modi)",
       "Pakistan: Pakistan Tehreek-e-Insaf (PM Imran Khan)",
-      "Economic Outlook - India: GDP ~$2.9 trillion, GDP per capita ~$2,100. Growth slowing due to global headwinds.",
-      "Economic Outlook - Pakistan: GDP ~$280 billion, GDP per capita ~$1,400. Crisis-led IMF bailout sought.",
+      "Economic Outlook - Pakistan: Crisis-led IMF bailout sought.",
+      "GDP and GDP per capita - Pakistan: GDP ~$280 billion, GDP per capita ~$1,400.",
+      "India: Bharatiya Janata Party (PM Narendra Modi)",
+      "Economic Outlook - India: Growth slowing due to global headwinds.",
+      "GDP and GDP per capita - India: GDP ~$2.9 trillion, GDP per capita ~$2,100.",
       "World Bank: Emphasized regional cooperation for sustainable growth."
     ]
   },
@@ -91,12 +107,14 @@ const conflicts = [
     year: "2025",
     title: "Pahalgam Massacre, Diplomatic Crisis, and Water Dispute",
     details: [
-      "India: Bharatiya Janata Party (PM Narendra Modi)",
       "Pakistan: Pakistan Muslim League (PM Hanif Abbasi)",
-      "Economic Outlook - India: GDP ~$3.9 trillion, GDP per capita ~$2,700. Slower growth amid geopolitical risks and inflation.",
-      "Economic Outlook - Pakistan: GDP ~$340 billion, GDP per capita ~$1,300. In economic crisis with rising debt and falling reserves.",
-      "Water Crisis - India threatened to revise water allocations under the Indus Waters Treaty.",
+      "Economic Outlook - Pakistan: In economic crisis with rising debt and falling reserves.",
+      "GDP and GDP per capita - Pakistan: GDP ~$340 billion, GDP per capita ~$1,300.",
+      "India: Bharatiya Janata Party (PM Narendra Modi)",
+      "Economic Outlook - India: Slower growth amid geopolitical risks and inflation.",
+      "GDP and GDP per capita - India: GDP ~$3.9 trillion, GDP per capita ~$2,700.",
       "Water Crisis - Pakistan raised the issue at international forums, citing existential threat.",
+      "Water Crisis - India threatened to revise water allocations under the Indus Waters Treaty.",
       "World Bank: Urged treaty compliance and facilitated emergency negotiations between the two countries."
     ]
   }
