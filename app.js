@@ -1,147 +1,112 @@
-const timelineData = [
+const conflicts = [
   {
-    year: "1947-48",
-    event: "First Kashmir War",
-    indiaGovt: "Indian National Congress (INC)",
-    pakistanGovt: "Muslim League",
-    educationStats: {
-      india: { literacy: "18%", schoolEnrollment: "N/A" },
-      pakistan: { literacy: "16%", schoolEnrollment: "N/A" }
-    },
-    analysis: "Post-partition upheaval; minimal focus on education due to nation-building priorities."
+    year: "1947–1948",
+    title: "First Kashmir War",
+    details: [
+      "India: Indian National Congress (PM Jawaharlal Nehru)",
+      "Pakistan: Muslim League (Governor-General Muhammad Ali Jinnah)",
+      "Economic Outlook - India: GDP ~$30 billion (USD 1947), GDP per capita ~$90. Nation-building phase with agrarian base.",
+      "Economic Outlook - Pakistan: GDP ~$10 billion, GDP per capita ~$100. Newly formed state facing fiscal and logistical challenges.",
+      "World Bank: Early involvement, helped mediate water sharing that laid the foundation for the Indus Waters Treaty."
+    ]
   },
   {
     year: "1965",
-    event: "Second Kashmir War",
-    indiaGovt: "INC",
-    pakistanGovt: "Ayub Khan's Military Govt",
-    educationStats: {
-      india: { literacy: "28%", schoolEnrollment: "45%" },
-      pakistan: { literacy: "21%", schoolEnrollment: "32%" }
-    },
-    analysis: "Military spending surged; education reforms in both countries stagnated."
+    title: "Second Kashmir War",
+    details: [
+      "India: Indian National Congress (PM Lal Bahadur Shastri)",
+      "Pakistan: Military regime under President Ayub Khan",
+      "Economic Outlook - India: GDP ~$60 billion, GDP per capita ~$110. Focused on industrialization under Five-Year Plans.",
+      "Economic Outlook - Pakistan: GDP ~$12 billion, GDP per capita ~$120. Fast-growing economy due to US aid and agricultural reforms.",
+      "World Bank: Actively supported development projects and post-conflict stabilization."
+    ]
   },
   {
     year: "1971",
-    event: "Bangladesh Liberation War",
-    indiaGovt: "INC (Indira Gandhi)",
-    pakistanGovt: "Yahya Khan's Military Govt",
-    educationStats: {
-      india: { literacy: "34%", schoolEnrollment: "50%" },
-      pakistan: { literacy: "24%", schoolEnrollment: "35%" }
-    },
-    analysis: "India’s focus on stabilizing borders and internal insurgencies; Pakistan’s education severely disrupted post-separation."
-  },
-  {
-    year: "1984",
-    event: "Operation Meghdoot (Siachen)",
-    indiaGovt: "INC (Indira Gandhi)",
-    pakistanGovt: "Zia-ul-Haq's Military Govt",
-    educationStats: {
-      india: { literacy: "43%", schoolEnrollment: "56%" },
-      pakistan: { literacy: "26%", schoolEnrollment: "38%" }
-    },
-    analysis: "India slowly increasing education access; Pakistan's heavy militarization detracted from education investment."
-  },
-  {
-    year: "1998",
-    event: "Nuclear Tests (Pokhran-II)",
-    indiaGovt: "BJP",
-    pakistanGovt: "Nawaz Sharif (PML-N)",
-    educationStats: {
-      india: { literacy: "61%", schoolEnrollment: "65%" },
-      pakistan: { literacy: "43%", schoolEnrollment: "45%" }
-    },
-    analysis: "Strategic competition prioritized over human development; World Bank warned of social investment decline."
+    title: "Bangladesh Liberation War",
+    details: [
+      "India: Indian National Congress (PM Indira Gandhi)",
+      "Pakistan: Military regime under President Yahya Khan",
+      "Economic Outlook - India: GDP ~$90 billion, GDP per capita ~$150. Strained due to refugee crisis and inflation.",
+      "Economic Outlook - Pakistan: GDP ~$11 billion, GDP per capita ~$130. Severely disrupted by civil war.",
+      "World Bank: Major aid and development support post-conflict, especially to Bangladesh."
+    ]
   },
   {
     year: "1999",
-    event: "Kargil War",
-    indiaGovt: "BJP (Atal Bihari Vajpayee)",
-    pakistanGovt: "Military Government (Musharraf)",
-    educationStats: {
-      india: { literacy: "62%", schoolEnrollment: "66%" },
-      pakistan: { literacy: "45%", schoolEnrollment: "46%" }
-    },
-    analysis: "Short-term conflict slowed education funding increases, especially in Pakistan."
+    title: "Kargil War",
+    details: [
+      "India: Bharatiya Janata Party (PM Atal Bihari Vajpayee)",
+      "Pakistan: Pakistan Muslim League (PM Nawaz Sharif)",
+      "Economic Outlook - India: GDP ~$470 billion, GDP per capita ~$440. Liberalized economy gaining momentum.",
+      "Economic Outlook - Pakistan: GDP ~$75 billion, GDP per capita ~$500. Hit by sanctions and instability.",
+      "World Bank: Continued infrastructure development; encouraged conflict de-escalation."
+    ]
   },
   {
-    year: "2001-02",
-    event: "Parliament Attack Crisis",
-    indiaGovt: "BJP (Atal Bihari Vajpayee)",
-    pakistanGovt: "Military Government (Musharraf)",
-    educationStats: {
-      india: { literacy: "65%", schoolEnrollment: "69%" },
-      pakistan: { literacy: "47%", schoolEnrollment: "48%" }
-    },
-    analysis: "Increased defense budgets; Pakistan education reforms slowed amid international tensions."
+    year: "2001–2002",
+    title: "India–Pakistan Standoff",
+    details: [
+      "India: Bharatiya Janata Party (PM Atal Bihari Vajpayee)",
+      "Pakistan: Military regime under President Pervez Musharraf",
+      "Economic Outlook - India: GDP ~$500 billion, GDP per capita ~$480. Economic reform continued despite military costs.",
+      "Economic Outlook - Pakistan: GDP ~$75 billion, GDP per capita ~$520. Reliant on foreign aid and remittances.",
+      "World Bank: Ongoing support in health, education, and power sectors; urged peace talks."
+    ]
   },
   {
     year: "2008",
-    event: "Mumbai Attacks",
-    indiaGovt: "INC (Manmohan Singh)",
-    pakistanGovt: "Pakistan People's Party (PPP)",
-    educationStats: {
-      india: { literacy: "70%", schoolEnrollment: "75%" },
-      pakistan: { literacy: "55%", schoolEnrollment: "55%" }
-    },
-    analysis: "India retained education growth despite tensions; Pakistan’s external pressures hampered education budgets."
+    title: "Mumbai Attacks",
+    details: [
+      "India: Indian National Congress (PM Manmohan Singh)",
+      "Pakistan: Pakistan Peoples Party (PM Yousaf Raza Gillani)",
+      "Economic Outlook - India: GDP ~$1.2 trillion, GDP per capita ~$1,000. Rapid growth temporarily shaken.",
+      "Economic Outlook - Pakistan: GDP ~$170 billion, GDP per capita ~$1,000. Facing inflation and global financial pressures.",
+      "World Bank: Continued development funding with caution amid security concerns."
+    ]
   },
   {
     year: "2016",
-    event: "Surgical Strikes (Post-Uri)",
-    indiaGovt: "BJP (Narendra Modi)",
-    pakistanGovt: "PML-N (Nawaz Sharif)",
-    educationStats: {
-      india: { literacy: "74%", schoolEnrollment: "78%" },
-      pakistan: { literacy: "58%", schoolEnrollment: "57%" }
-    },
-    analysis: "Security prioritization in Pakistan; India emphasized 'Skill India' while balancing security demands."
+    title: "Uri Attack and Surgical Strikes",
+    details: [
+      "India: Bharatiya Janata Party (PM Narendra Modi)",
+      "Pakistan: Pakistan Muslim League (PM Nawaz Sharif)",
+      "Economic Outlook - India: GDP ~$2.3 trillion, GDP per capita ~$1,700. Strong domestic growth with focus on infrastructure.",
+      "Economic Outlook - Pakistan: GDP ~$280 billion, GDP per capita ~$1,500. Dependent on CPEC investments and external loans.",
+      "World Bank: Supported development programs; called for restraint on both sides."
+    ]
   },
   {
     year: "2019",
-    event: "Balakot Airstrike + Removal of Article 370",
-    indiaGovt: "BJP (Narendra Modi)",
-    pakistanGovt: "PTI (Imran Khan)",
-    educationStats: {
-      india: { literacy: "77%", schoolEnrollment: "82%" },
-      pakistan: { literacy: "60%", schoolEnrollment: "58%" }
-    },
-    analysis: "Education innovation vs political tensions: India's reforms continued, Pakistan saw rising extremism pressures."
-  },
-  {
-    year: "2023",
-    event: "G20 Kashmir Dispute",
-    indiaGovt: "BJP (Narendra Modi)",
-    pakistanGovt: "Caretaker Govt",
-    educationStats: {
-      india: { literacy: "79%", schoolEnrollment: "85%" },
-      pakistan: { literacy: "61%", schoolEnrollment: "59%" }
-    },
-    analysis: "India globally projecting Kashmir normalcy; Pakistan grappling with internal instability impacting schooling."
-  },
-  {
-    year: "2024",
-    event: "Indus Treaty Review",
-    indiaGovt: "BJP (Narendra Modi)",
-    pakistanGovt: "Caretaker Govt",
-    educationStats: {
-      india: { literacy: "80%", schoolEnrollment: "87%" },
-      pakistan: { literacy: "62%", schoolEnrollment: "60%" }
-    },
-    analysis: "Water tensions raising broader sustainability concerns; indirect impacts on rural education likely."
+    title: "Pulwama Attack and Balakot Airstrikes",
+    details: [
+      "India: Bharatiya Janata Party (PM Narendra Modi)",
+      "Pakistan: Pakistan Tehreek-e-Insaf (PM Imran Khan)",
+      "Economic Outlook - India: GDP ~$2.9 trillion, GDP per capita ~$2,100. Growth slowing due to global headwinds.",
+      "Economic Outlook - Pakistan: GDP ~$280 billion, GDP per capita ~$1,400. Crisis-led IMF bailout sought.",
+      "World Bank: Emphasized regional cooperation for sustainable growth."
+    ]
   },
   {
     year: "2025",
-    event: "Suspension of Indus Treaty",
-    indiaGovt: "BJP (Narendra Modi)",
-    pakistanGovt: "PML-N Coalition (expected)",
-    educationStats: {
-      india: { literacy: "81%", schoolEnrollment: "89%" },
-      pakistan: { literacy: "63%", schoolEnrollment: "62%" }
-    },
-    analysis: "Potential for major development disruption in Pakistan if water crisis escalates; education systems vulnerable."
+    title: "Pahalgam Massacre, Diplomatic Crisis, and Water Dispute",
+    details: [
+      "India: Bharatiya Janata Party (PM Narendra Modi)",
+      "Pakistan: Pakistan Muslim League (PM Hanif Abbasi)",
+      "Economic Outlook - India: GDP ~$3.9 trillion, GDP per capita ~$2,700. Slower growth amid geopolitical risks and inflation.",
+      "Economic Outlook - Pakistan: GDP ~$340 billion, GDP per capita ~$1,300. In economic crisis with rising debt and falling reserves.",
+      "Water Crisis - India threatened to revise water allocations under the Indus Waters Treaty.",
+      "Water Crisis - Pakistan raised the issue at international forums, citing existential threat.",
+      "World Bank: Urged treaty compliance and facilitated emergency negotiations between the two countries."
+    ]
   }
 ];
 
-// Code to render timeline dynamically here...
+const container = document.getElementById("timeline");
+
+conflicts.forEach(conflict => {
+  const div = document.createElement("div");
+  div.className = "conflict";
+  div.innerHTML = `<h2>${conflict.year} - ${conflict.title}</h2><ul>${conflict.details.map(item => `<li>${item}</li>`).join("")}</ul>`;
+  container.appendChild(div);
+});
