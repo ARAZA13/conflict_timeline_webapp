@@ -3,6 +3,7 @@ const conflicts = [
   {
     year: "1947–1948",
     title: "First Kashmir War",
+    context: "Triggered by Pakistan-backed tribal invasions into the princely state of Jammu and Kashmir after Partition. The Maharaja's accession to India prompted Indian military intervention. The UN mediated a ceasefire in 1949, leading to the creation of the Line of Control but no final resolution. The World Bank began engaging with water-sharing issues, eventually laying groundwork for the Indus Waters Treaty.",
     details: [
       "Pakistan: Muslim League (Governor-General Muhammad Ali Jinnah)",
       "Economic Outlook - Pakistan: Newly formed state facing fiscal and logistical challenges.",
