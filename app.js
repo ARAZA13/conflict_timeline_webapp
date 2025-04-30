@@ -1,8 +1,8 @@
+
 const conflicts = [
   {
     year: "1947–1948",
     title: "First Kashmir War",
-    context: "Triggered by Pakistan-backed tribal invasions into the princely state of Jammu and Kashmir after Partition. The Maharaja's accession to India prompted Indian military intervention. The UN mediated a ceasefire in 1949, leading to the creation of the Line of Control but no final resolution. The World Bank began engaging with water-sharing issues, eventually laying groundwork for the Indus Waters Treaty.",
     details: [
       "Pakistan: Muslim League (Governor-General Muhammad Ali Jinnah)",
       "Economic Outlook - Pakistan: Newly formed state facing fiscal and logistical challenges.",
@@ -16,7 +16,6 @@ const conflicts = [
   {
     year: "1965",
     title: "Second Kashmir War",
-    context: "Sparked by Pakistan’s Operation Gibraltar to infiltrate forces into Kashmir and incite insurgency. India retaliated with a full-scale counterattack. The war ended in a stalemate after 17 days of fighting. The USSR brokered peace via the Tashkent Agreement. The World Bank continued regional development financing, while the UN monitored ceasefire violations.",
     details: [
       "Pakistan: Military regime under President Ayub Khan",
       "Economic Outlook - Pakistan: Fast-growing economy due to US aid and agricultural reforms.",
@@ -30,7 +29,6 @@ const conflicts = [
   {
     year: "1971",
     title: "Bangladesh Liberation War",
-    context: "Triggered by political repression and military crackdown in East Pakistan following the 1970 elections. Millions of refugees fled to India, which intervened militarily. The war led to the creation of Bangladesh. The UN called for ceasefire and humanitarian aid. The World Bank and IMF later focused aid on rebuilding Bangladesh.",
     details: [
       "Pakistan: Military regime under President Yahya Khan",
       "Economic Outlook - Pakistan: Severely disrupted by civil war.",
@@ -44,7 +42,6 @@ const conflicts = [
   {
     year: "1999",
     title: "Kargil War",
-    context: "Pakistan-backed militants and soldiers occupied Indian positions in Kargil along the Line of Control. India launched a counter-offensive. The war ended after US diplomatic pressure on Pakistan and restoration of the status quo. The UN avoided direct involvement, while the World Bank maintained non-political development activities.",
     details: [
       "Pakistan: Pakistan Muslim League (PM Nawaz Sharif)",
       "Economic Outlook - Pakistan: Hit by sanctions and instability.",
@@ -58,7 +55,6 @@ const conflicts = [
   {
     year: "2001–2002",
     title: "India–Pakistan Standoff",
-    context: "Following a deadly attack on the Indian Parliament by Pakistan-based terrorists, both countries deployed nearly a million troops. Diplomatic efforts by the US, UK, and UN averted war. The standoff highlighted nuclear risks. The IMF and World Bank focused on sustaining economic programs amid regional uncertainty.",
     details: [
       "Pakistan: Military regime under President Pervez Musharraf",
       "Economic Outlook - Pakistan: Reliant on foreign aid and remittances.",
@@ -72,7 +68,6 @@ const conflicts = [
   {
     year: "2008",
     title: "Mumbai Attacks",
-    context: "Ten coordinated attacks in Mumbai by Pakistan-based group Lashkar-e-Taiba killed over 170 civilians. India blamed Pakistani intelligence elements. The incident derailed diplomatic talks. The UN imposed sanctions on the group. The World Bank and IMF advised economic stability measures amid global financial uncertainty.",
     details: [
       "Pakistan: Pakistan Peoples Party (PM Yousaf Raza Gillani)",
       "Economic Outlook - Pakistan: Facing inflation and global financial pressures.",
@@ -86,7 +81,6 @@ const conflicts = [
   {
     year: "2016",
     title: "Uri Attack and Surgical Strikes",
-    context: "Heavily armed militants attacked an Indian army base in Uri, killing 19 soldiers. India launched cross-border 'surgical strikes' targeting terror launchpads. The UN urged restraint, while the World Bank continued infrastructure funding. No formal war followed, but tensions rose significantly.",
     details: [
       "Pakistan: Pakistan Muslim League (PM Nawaz Sharif)",
       "Economic Outlook - Pakistan: Dependent on CPEC investments and external loans.",
@@ -100,7 +94,6 @@ const conflicts = [
   {
     year: "2019",
     title: "Pulwama Attack and Balakot Airstrikes",
-    context: "A suicide bombing in Pulwama killed 40 Indian paramilitary personnel. India retaliated with airstrikes in Balakot, Pakistan. The UN urged de-escalation while the US, China, and Russia intervened diplomatically. The IMF conditioned financial support to Pakistan on regional stability.",
     details: [
       "Pakistan: Pakistan Tehreek-e-Insaf (PM Imran Khan)",
       "Economic Outlook - Pakistan: Crisis-led IMF bailout sought.",
@@ -114,7 +107,6 @@ const conflicts = [
   {
     year: "2025",
     title: "Pahalgam Massacre, Diplomatic Crisis, and Water Dispute",
-    context: "A terror attack in Pahalgam reignited hostilities. Diplomatic relations froze, and India threatened to revise the Indus Waters Treaty. Pakistan escalated the issue to international forums. The UN Security Council debated intervention, while the World Bank mediated emergency water talks. IMF postponed funding tranches to both nations amid rising instability.",
     details: [
       "Pakistan: Pakistan Muslim League (PM Hanif Abbasi)",
       "Economic Outlook - Pakistan: In economic crisis with rising debt and falling reserves.",
@@ -134,6 +126,6 @@ const container = document.getElementById("timeline");
 conflicts.forEach(conflict => {
   const div = document.createElement("div");
   div.className = "conflict";
-  div.innerHTML = `<h2>${conflict.year} - ${conflict.title}</h2><p><strong>Context:</strong> ${conflict.context}</p><ul>${conflict.details.map(item => `<li>${item}</li>`).join("")}</ul>`;
+  div.innerHTML = `<h2>${conflict.year} - ${conflict.title}</h2><ul>${conflict.details.map(item => `<li>${item}</li>`).join("")}</ul>`;
   container.appendChild(div);
 });
