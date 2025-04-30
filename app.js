@@ -10,10 +10,7 @@ const conflicts = [
       "India: Indian National Congress (PM Jawaharlal Nehru)",
       "Economic Outlook - India: Nation-building phase with agrarian base.",
       "GDP and GDP per capita - India: GDP ~$30 billion, GDP per capita ~$90.",
-      "World Bank: Early involvement, helped mediate water sharing that laid the foundation for the Indus Waters Treaty."
-      "Context: Triggered by Pakistan-backed tribal invasions into the princely state of Jammu and Kashmir after Partition. The Maharaja's accession to India prompted Indian military intervention. The UN mediated a ceasefire in 1949, leading to the creation of the Line of Control but no final resolution. The World Bank began engaging with water-sharing issues, eventually laying groundwork for the Indus Waters Treaty.",
-
-
+      "World Bank: Early involvement, helped mediate water sharing that laid the foundation for the Indus Waters Treaty.Triggered by Pakistan-backed tribal invasions into the princely state of Jammu and Kashmir after Partition, The Maharaja's accession to India prompted Indian military intervention"
     ]
   },
   {
